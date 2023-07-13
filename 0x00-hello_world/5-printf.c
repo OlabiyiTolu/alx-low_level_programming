@@ -2,7 +2,7 @@
 /**
  * main - function tthat uses print f
  * Description: print f
- * return - Always 0(success
+ * return: Always 0(success
  */
 int main(void)
 {
