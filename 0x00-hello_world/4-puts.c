@@ -3,7 +3,7 @@
 /**
  * main - Prints a string
  *
- * Description: Prints the string "Programming is like building a multilingual puzzle"
+ * Description: Prints the string 
  * followed by a new line.
  *
  * Return: Always 0 (Success)
