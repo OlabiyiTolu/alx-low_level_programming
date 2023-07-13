@@ -1,8 +1,11 @@
 #include <stdio.h>
 /**
- * main - function tthat uses print f
- * Description: print f
- * return: Always 0(success
+ * main - Prints a string
+ *
+ * Description: Prints the string 
+ * followed by a new line.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
