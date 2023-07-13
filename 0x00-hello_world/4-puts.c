@@ -1,6 +1,13 @@
 #include <stdio.h>
 
-/* C function that prints without using print f */
+/**
+ * main - Prints a string
+ *
+ * Description: Prints the string "Programming is like building a multilingual puzzle"
+ * followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
