@@ -5,6 +5,8 @@
  *
  * Return: return 0
  */
+/* Description: Prints the alphabet in lowercase, and then in uppercase, followed by a new line. */
+
 int main(void)
 {
 	char c;
