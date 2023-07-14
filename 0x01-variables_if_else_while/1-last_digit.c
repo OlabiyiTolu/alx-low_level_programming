@@ -18,11 +18,12 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	n1 = n % 10;
-	if (n > 5)
+
+	if (n1 > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, n1);
 	}
-	else if (n == 0)
+	else if (n1 == 0)
 	{
 		printf("Lastdigit of %d id %d and is 0\n", n, n1);
 	}
