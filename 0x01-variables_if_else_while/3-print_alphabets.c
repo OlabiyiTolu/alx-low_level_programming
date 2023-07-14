@@ -1,11 +1,11 @@
 #include <stdio.h>
+
 /*
- * main - print alphabet
+ * main - print alphabets
  * Description: print alphabet in lower and upper case
  *
  * Return: return 0
  */
-/* Description: Prints the alphabet in lowercase, and then in uppercase, followed by a new line. */
 
 int main(void)
 {
