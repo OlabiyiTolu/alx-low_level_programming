@@ -3,7 +3,13 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - positive or zero or negative
+ *
+ * Description: A function that retun either postive, zero or negative
+ *
+ * Return: return 0
+ */
 int main(void)
 {
 	int n;
