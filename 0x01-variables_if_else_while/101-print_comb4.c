@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - print three combinations
  * Description: print three digit combinations
  *
@@ -20,7 +20,7 @@ int main(void)
 				putchar(i + '0');
 				putchar(j + '0');
 				putchar(k + '0');
-				if ( i != 7 || j != 8 || k != 9)
+				if (i != 7 || j != 8 || k != 9)
 				{
 					putchar(',');
 					putchar(' ');
