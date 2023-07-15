@@ -2,7 +2,7 @@
 
 /**
  * main - print different combinations
- * Description: program that prints all possible different combinations of two digits
+ * Description: prints all possible different combinations of two digits
  *
  * Return: return 0
  */
@@ -25,5 +25,6 @@ int main(void)
 			}
 		}
 	}
+	putchar('\n')
 	return (0);
 }
