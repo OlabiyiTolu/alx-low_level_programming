@@ -1,14 +1,15 @@
 #include <stdio.h>
-
+#include <unistd.h>
+#include "main.h"
 /**
- * main - print alphabet
+ * print_alphabet - print alphabet
  *
  * Return: return0
  */
 
 void print_alphabet(void)	
 {	
-	char ch;
+	int ch;
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
