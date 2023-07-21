@@ -3,6 +3,7 @@
 /**
 * _isupper - check forupper case
 *
+* Description: uppercase
 * Return: return 1 if upper and 0 if otherwise 
 */
 
