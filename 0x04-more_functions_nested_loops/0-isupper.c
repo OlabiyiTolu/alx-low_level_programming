@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* _isupper - check forupper case
-*
-* Description: uppercase
-* Return: return 1 if upper and 0 if otherwise 
-*/
+ * _isupper - check forupper case
+ *
+ * Description: uppercase
+ * Return: return 1 if upper and 0 if otherwise 
+ */
 
 int _isupper(int c)
 {
@@ -14,7 +14,7 @@ int _isupper(int c)
 		return (1);
 	}
 	else
-	{
+		{
 		return(0);
 	}
 }
