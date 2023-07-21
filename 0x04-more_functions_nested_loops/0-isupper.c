@@ -2,6 +2,7 @@
 
 /**
 * _isupper - check forupper case
+*
 * Return: return 1 if upper and 0 if otherwise 
 */
 
