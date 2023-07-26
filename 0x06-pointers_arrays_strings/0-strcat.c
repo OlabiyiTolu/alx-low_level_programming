@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcat - concat two strings
+ * _strcat - concat two strings
  * @dest: destination
  * @src: what to append
  *
@@ -17,9 +17,11 @@ char *_strcat(char *dest, char *src)
 	{
 		dest_len++;
 	}
+
 	for (index = 0; src[index]; index++)
 	{
 		dest[dest_len++] = src[index];
 	}
-	return (0);
+
+	return (dest);
 }
