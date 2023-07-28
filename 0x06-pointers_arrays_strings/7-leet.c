@@ -11,7 +11,7 @@ char *leet(char *str)
 	int index1 = 0, index2;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 	char replacements[8] = {'0', '1', '?', '3', '4', '?', '?', '7'};
-	
+
 	while (str[index1])
 	{
 		for (index2 = 0; index2 <= 7; index2++)
@@ -26,4 +26,3 @@ char *leet(char *str)
 	}
 	return (str);
 }
-
