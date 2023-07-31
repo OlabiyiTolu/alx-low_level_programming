@@ -5,9 +5,8 @@
  * @s: string
  * @c:  first occurrence of the character c
  *
- * Return: Returns a pointe
+ * Return: Returns a pointer
  */
-
 char *_strchr(char *s, char c)
 {
 	int index;
