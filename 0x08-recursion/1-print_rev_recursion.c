@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _pint_new_recursion - print reverse recursion
+ * _print_rev_recursion - print reverse recursion
  * @s: characterto print
  *
  * Return: always return
