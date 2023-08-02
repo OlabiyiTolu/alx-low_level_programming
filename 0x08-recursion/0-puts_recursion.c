@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _puts_recursion - unction that prints a string,
+ * _puts_recursion - function that prints a string,
  * @c: character to print
  *
- * Return; always return
+ * Return: always return
  */
 
 void _puts_recursion(char *s)
@@ -13,7 +13,9 @@ void _puts_recursion(char *s)
 		_putchar('\n');
 		return;
 	}
-
-	_putchar(*s);
-       	_puts_recursion(s + 1);
+	else
+	{
+		_putchar(*s);
+       		_puts_recursion(s + 1);
+	}
 }
