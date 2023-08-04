@@ -1,0 +1,461 @@
+!<arch>
+0-memset.c/     0           0     0     644     282       `
+#include "main.h"
+/**
+ * _memset - function that fills memory with a constant byte.
+ * @s: memory area
+ * @b: constant byte
+ * @n: first n byte
+ *
+ * Return: return s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *p = s;
+
+	while (n--)
+	{
+		*p++ = b;
+	}
+	return (s);
+}
+1-memcpy.c/     0           0     0     644     282       `
+#include "main.h"
+/**
+ * _memcpy - function that copies memory area.
+ * @dest: memory area
+ * @src: memory area
+ * @n: byte
+ *
+ * Return: return dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	char *p = dest;
+
+	while (n--)
+	{
+		*p++ = *src++;
+	}
+	return (dest);
+}
+2-strchr.c/     0           0     0     644     361       `
+#include "main.h"
+#include <stddef.h>
+/**
+ * _strchr - function that locates a character in a string.
+ * @s: string
+ * @c: first occurrence of the character c
+ *
+ * Return: Returns a pointer
+ */
+char *_strchr(char *s, char c)
+{
+	int index;
+
+	for (index = 0; s[index] != '\0'; index++)
+	{
+		if (s[index] == c)
+		{
+			return (&s[index]);
+		}
+	}
+	return (NULL);
+}
+
+3-strspn.c/     0           0     0     644     574       `
+#include "main.h"
+/**
+*_strspn - search the number of bytes in the initial
+* segment of s which consist only of bytes from accept
+*@s:segment targeted
+*@accept:reference bytes container
+*
+*Return:returns the number of bytes in the initial
+* segment of s which consist only of bytes from accept
+*/
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int bytes = 0;
+	int i;
+
+	while (*s)
+	{
+		for (i = 0; accept[i]; i++)
+		{
+			if (accept[i] == *s)
+			{
+				bytes++;
+				break;
+			}
+			else if ((accept[i + 1]) == '\0')
+				return (bytes);
+		}
+		s++;
+	}
+	return (bytes);
+}
+5-strstr.c/     0           0     0     644     713       `
+#include "main.h"
+/**
+*_strstr - The _strstr() function finds the first occurrence
+* of the substring needle in the string haystack.
+* The terminating null bytes (\0) are not compared
+*@haystack: string where the search is made
+*@needle: string whose occurence is searched in haystack
+*Return:Returns a pointer to the beginning of the located
+* substring, or NULL if the substring is not found.
+*/
+
+char *_strstr(char *haystack, char *needle)
+{
+	int i;
+
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
+	{
+		i = 0;
+
+		if (haystack[i] == needle[i])
+		{
+			do {
+				if (needle[i + 1] == '\0')
+					return (haystack);
+				i++;
+			} while (haystack[i] == needle[i]);
+		}
+		haystack++;
+	}
+	return ('\0');
+}
+
+4-strpbrk.c/    0           0     0     644     528       `
+#include "main.h"
+/**
+*_strpbrk - The _strpbrk() function locates the first
+* occurrence in the string s of any of the bytes in
+*the string accept
+*
+*@s: string where search is made
+*@accept: string where searched bytes are located
+*
+*Return:Returns a pointer to the byte in s that matches
+* one of the bytes in accept, or NULL if no such byte is found
+*/
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i;
+
+	while (*s)
+	{
+		for (i = 0; accept[i]; i++)
+		{
+			if (accept[i] == *s)
+				return (s);
+		}
+		s++;
+	}
+
+	return ('\0');
+}
+0-strcat.c/     0           0     0     644     349       `
+#include "main.h"
+
+/**
+ * _strcat - concat two strings
+ * @dest: destination
+ * @src: what to append
+ *
+ * Return: always return
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int index = 0;
+	int dest_len = 0;
+
+	while (dest[index++])
+	{
+		dest_len++;
+	}
+
+	for (index = 0; src[index]; index++)
+	{
+		dest[dest_len++] = src[index];
+	}
+
+	return (dest);
+}
+
+1-strncat.c/    0           0     0     644     393       `
+#include "main.h"
+
+/**
+ * _strncat - concatusing  most n bytes
+ * @dest: destintion
+ * @src: source to append
+ * @n: integer
+ *
+ * Return: always return
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int index = 0;
+	int dest_len = 0;
+
+	while (dest[index++])
+	{
+		dest_len++;
+	}
+
+	for (index = 0; src[index] && index < n; index++)
+	{
+		dest[dest_len++] = src[index];
+	}
+	return (dest);
+}
+
+2-strncpy.c/    0           0     0     644     328       `
+#include "main.h"
+
+/**
+ * _strncpy - copy strings
+ * @dest: destination
+ * @src: source
+ * @n: integer number
+ *
+* Return: returndest
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	for ( ; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+	return (dest);
+}
+3-strcmp.c/     0           0     0     644     493       `
+#include "main.h"
+
+/**
+ * _strcmp - compare string
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: return diff
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0;
+	int diff = 0;
+
+	while (1)
+	{
+		if (s1[i] == '\0' && s2[i] == '\0')
+		{
+			break;
+		}
+		else if (s1[i] == '\0')
+		{
+			diff = s2[i];
+			break;
+		}
+		else if (s2[i] == '\0')
+		{
+			diff = s1[i];
+			break;
+		}
+		else if (s1[i] != s2[i])
+		{
+			diff = s1[i] - s2[i];
+			break;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return (diff);
+}
+
+100-atoi.c/     0           0     0     644     310       `
+/**
+* _atoi - changes a string to an int
+* @s: the string to be changed
+*
+* Return: the converted int
+*/
+int _atoi(char *s)
+{
+int i = 1;
+unsigned int num = 0;
+do {
+if (*s == '-')
+i *= -1;
+else if (*s >= '0' && *s <= '9')
+num = num * 10 + (*s - '0');
+else if (num > 0)
+break;
+} while (*s++);
+return (num *i);
+}
+2-strlen.c/     0           0     0     644     201       `
+#include "main.h"
+
+/**
+ * _strlen - length of string
+ * @s: chharacter
+ *
+ * Return: alwats return
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+3-puts.c/       0           0     0     644     138       `
+#include "main.h"
+/**
+ * _puts - puts string
+ * @str: string variable
+ *
+ * Return: return zero
+ */
+void _puts(char *str)
+{
+	puts(str);
+}
+1-isdigit.c/    0           0     0     644     243       `
+#include "main.h"
+/**
+*_isdigit - function that verifies if a  character is a digit or not
+*@c: tested character
+*Return: returns 1 if it is uppercase , 0 if not
+*/
+
+int _isdigit(int c)
+{
+if ((c >= 48) && (c <= 57))
+return (1);
+
+return (0);
+}
+
+4-isalpha.c/    0           0     0     644     230       `
+#include "main.h"
+/**
+*_isalpha - controls if a character is alphabetical
+*@c: character to be verified
+*Return: return 0 or 1
+*/
+int _isalpha(int c)
+{
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+return (1);
+
+return (0);
+}
+6-abs.c/        0           0     0     644     201       `
+#include "main.h"
+/**
+* _abs - prints the absolute value of a number
+*@i: number targeted
+*Return: returns 0
+*/
+int _abs(int i)
+{
+if (i > 0)
+return (i);
+else if (i < 0)
+return (-i);
+else
+return (0);
+}
+
+9-strcpy.c/     0           0     0     644     264       `
+#include "main.h"
+/**
+* _strcpy - Copy paste string
+*@dest: destination
+*@src: source
+*Return: dest
+*/
+char *_strcpy(char *dest, char *src)
+{
+int inc = 0;
+while (*(src + inc) != '\0')
+{
+*(dest + inc) = *(src + inc);
+inc++;
+}
+*(dest + inc) = '\0';
+return (dest);
+}
+_putchar.c/     0           0     0     644     72        `
+#include <unistd.h>
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+3-islower.c/    0           0     0     644     205       `
+#include "main.h"
+/**
+*_islower - controls if a character is in lowercase
+*@c: character to be verified
+*Return: return 0 or 1
+*/
+int _islower(int c)
+{
+if (c >= 'a' && c <= 'z')
+return (1);
+
+return (0);
+}
+
+0-isupper.c/    0           0     0     644     247       `
+#include "main.h"
+/**
+*_isupper - function that verifies if a  character is uppercase or not
+*@c: tested character
+*Return: returns 1 if it is uppercase , 0 if not
+*/
+
+int _isupper(int c)
+{
+if ((c >= 'A') && (c <= 'Z'))
+return (1);
+
+return (0);
+}
+
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
