@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 /**
- * *create_array - createan array of chars
+ * *create_array - create an array of chars
  * @size: size of array
- * @c: characters
+ * @c: character to insert
  *
  * Return: Always return
  */
