@@ -6,6 +6,7 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     unsigned int n;
@@ -22,3 +23,4 @@ int main(void)
     printf("%u\n", n);
     return (0);
 }
+
